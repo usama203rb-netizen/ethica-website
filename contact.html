@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | ETHICA REVENUE GROUPS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <a class="brand" href="index.html"><span class="logo-mark">ERG</span><span>ETHICA REVENUE GROUPS</span></a>
+        <button class="menu-btn" type="button">Menu</button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <span class="badge">Get in touch</span>
+          <h1>Request a free billing assessment</h1>
+          <p>Share your current challenges and our team will propose a practical revenue improvement plan.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container contact-box">
+          <article class="card">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> usama203rb@gmail.com</p>
+            <p><strong>Phone:</strong> +92 344 1790752</p>
+            <p><strong>WhatsApp:</strong> +92 344 1790752</p>
+            <p><strong>Address:</strong> Lahore, Punjab, Pakistan</p>
+            <p><strong>Business Hours:</strong> Monday to Friday, 9:00 AM - 7:00 PM PKT</p>
+          </article>
+
+          <form
+            class="card"
+            id="contactForm"
+            data-form-endpoint="https://formspree.io/f/mgorlozz"
+          >
+            <h3>Send Message</h3>
+            <label>
+              Full Name
+              <input type="text" name="fullName" placeholder="Your name" required />
+            </label>
+            <label>
+              Clinic / Company
+              <input type="text" name="company" placeholder="Your clinic name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Service Needed
+              <select name="service">
+                <option>Complete Medical Billing</option>
+                <option>Denial Management</option>
+                <option>AR Follow-up</option>
+                <option>Coding Support</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea rows="4" name="message" placeholder="Tell us about your needs" required></textarea>
+            </label>
+            <button class="btn btn-primary" id="submitBtn" type="submit">Submit</button>
+            <p id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <span>© 2026 ETHICA REVENUE GROUPS. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="faq.html">FAQ</a></span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

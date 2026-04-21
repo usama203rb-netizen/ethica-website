@@ -1,0 +1,14 @@
+{
+  "name": "ethica-revenue-groups-site",
+  "version": "1.0.0",
+  "description": "Website and contact form backend for ETHICA REVENUE GROUPS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "latest",
+    "express": "latest",
+    "nodemailer": "latest"
+  }
+}
