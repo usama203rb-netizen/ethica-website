@@ -78,18 +78,12 @@ a {
   letter-spacing: 0.5px;
 }
 
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.35px;
-  color: #ffffff;
-  background: #0f766e url("logo.png") center/cover no-repeat;
-  flex-shrink: 0;
+.brand-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: min(240px, 58vw);
+  object-fit: contain;
 }
 
 .menu-btn {
