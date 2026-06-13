@@ -32,7 +32,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("logo.svg") center/520px no-repeat;
+  background: url("logo.png") center/520px no-repeat;
   opacity: 0.045;
   z-index: 0;
   pointer-events: none;
@@ -88,7 +88,7 @@ a {
   font-weight: 800;
   letter-spacing: 0.35px;
   color: #ffffff;
-  background: #0f766e url("logo.svg") center/cover no-repeat;
+  background: #0f766e url("logo.png") center/cover no-repeat;
   flex-shrink: 0;
 }
 
