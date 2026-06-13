@@ -15,33 +15,46 @@ if (contactForm && formStatus && submitBtn) {
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(contactForm);
     const endpoint =
-      contactForm.getAttribute("data-form-endpoint") || "/api/contact";
-    const payload = {
-      fullName: String(formData.get("fullName") || "").trim(),
-      company: String(formData.get("company") || "").trim(),
-      email: String(formData.get("email") || "").trim(),
-      service: String(formData.get("service") || "").trim(),
-      message: String(formData.get("message") || "").trim()
-    };
+      contactForm.getAttribute("action") ||
+      contactForm.getAttribute("data-form-endpoint") ||
+      "/api/contact";
+    const formData = new FormData(contactForm);
+    const isFormspree = endpoint.includes("formspree.io");
+
+    if (isFormspree) {
+      const email = String(formData.get("email") || "").trim();
+      const service = String(formData.get("service") || "General").trim();
+      formData.set("_replyto", email);
+      formData.set("_subject", `New Website Inquiry - ${service}`);
+    }
 
     formStatus.textContent = "Sending...";
     submitBtn.disabled = true;
 
     try {
-      const isFormspree = endpoint.includes("formspree.io");
       const response = await fetch(endpoint, {
         method: "POST",
         headers: isFormspree
-          ? { Accept: "application/json", "Content-Type": "application/json" }
+          ? { Accept: "application/json" }
           : { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: isFormspree
+          ? formData
+          : JSON.stringify({
+              fullName: String(formData.get("name") || "").trim(),
+              company: String(formData.get("company") || "").trim(),
+              email: String(formData.get("email") || "").trim(),
+              service: String(formData.get("service") || "").trim(),
+              message: String(formData.get("message") || "").trim()
+            })
       });
 
       const result = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(result.message || "Failed to send message.");
+        const message = Array.isArray(result.errors)
+          ? result.errors.map((error) => error.message).join(", ")
+          : result.error || result.message || "Failed to send message.";
+        throw new Error(message);
       }
 
       formStatus.textContent = "Message sent successfully. We will contact you soon.";
