@@ -9,6 +9,24 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(__dirname));
 
+const cleanRoutes = {
+  "/": "index.html",
+  "/about": "about.html",
+  "/services": "services.html",
+  "/process": "process.html",
+  "/pricing": "pricing.html",
+  "/faq": "faq.html",
+  "/contact": "contact.html",
+  "/privacy": "privacy.html",
+  "/terms": "terms.html"
+};
+
+Object.entries(cleanRoutes).forEach(([route, file]) => {
+  app.get(route, (_req, res) => {
+    res.sendFile(path.join(__dirname, file));
+  });
+});
+
 app.post("/api/contact", async (req, res) => {
   const { fullName, company, email, service, message } = req.body || {};
 
@@ -47,10 +65,6 @@ app.post("/api/contact", async (req, res) => {
   } catch (error) {
     return res.status(500).json({ message: "Email send failed. Check SMTP settings." });
   }
-});
-
-app.get("*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(PORT, () => {

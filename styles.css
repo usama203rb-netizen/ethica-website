@@ -32,7 +32,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("logo.png") center/520px no-repeat;
+  background: url("/logo.svg") center/520px no-repeat;
   opacity: 0.045;
   z-index: 0;
   pointer-events: none;
@@ -82,7 +82,7 @@ a {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: url("logo.png") center/cover no-repeat;
+  background: url("/logo.svg") center/cover no-repeat;
   color: transparent;
   display: grid;
   place-items: center;
@@ -253,6 +253,7 @@ section {
   padding: 1.1rem;
 }
 
+.card h2,
 .card h3 {
   margin-top: 0.2rem;
 }

@@ -7,6 +7,15 @@
     }
   ],
   "routes": [
+    { "src": "/index.html", "dest": "/", "status": 301 },
+    { "src": "/about.html", "dest": "/about", "status": 301 },
+    { "src": "/services.html", "dest": "/services", "status": 301 },
+    { "src": "/process.html", "dest": "/process", "status": 301 },
+    { "src": "/pricing.html", "dest": "/pricing", "status": 301 },
+    { "src": "/faq.html", "dest": "/faq", "status": 301 },
+    { "src": "/contact.html", "dest": "/contact", "status": 301 },
+    { "src": "/privacy.html", "dest": "/privacy", "status": 301 },
+    { "src": "/terms.html", "dest": "/terms", "status": 301 },
     { "src": "/", "dest": "/index.html" },
     { "src": "/about", "dest": "/about.html" },
     { "src": "/services", "dest": "/services.html" },
