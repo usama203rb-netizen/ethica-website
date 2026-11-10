@@ -17,6 +17,7 @@ const cleanRoutes = {
   "/pricing": "pricing.html",
   "/faq": "faq.html",
   "/contact": "contact.html",
+  "/thank-you": "thank-you.html",
   "/privacy": "privacy.html",
   "/terms": "terms.html"
 };

@@ -6,7 +6,7 @@
     <title>Contact Us | Free Billing Assessment | ETHICA REVENUE GROUPS</title>
     <meta
       name="description"
-      content="Contact ETHICA REVENUE GROUPS for a free medical billing assessment. Email, phone, and WhatsApp support available for US healthcare providers."
+      content="Contact ETHICA REVENUE GROUPS for a free medical billing assessment. Email, phone, and WhatsApp support available for healthcare providers."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://ethicarevenuegroups.com/contact" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Contact Us | Free Billing Assessment | ETHICA REVENUE GROUPS" />
     <meta
       property="og:description"
-      content="Contact ETHICA REVENUE GROUPS for a free medical billing assessment. Email, phone, and WhatsApp support available for US healthcare providers."
+      content="Contact ETHICA REVENUE GROUPS for a free medical billing assessment. Email, phone, and WhatsApp support available for healthcare providers."
     />
     <meta property="og:url" content="https://ethicarevenuegroups.com/contact" />
     <meta property="og:image" content="https://ethicarevenuegroups.com/logo.png" />
@@ -23,7 +23,7 @@
     <meta name="twitter:title" content="Contact Us | Free Billing Assessment | ETHICA REVENUE GROUPS" />
     <meta
       name="twitter:description"
-      content="Contact ETHICA REVENUE GROUPS for a free medical billing assessment. Email, phone, and WhatsApp support available for US healthcare providers."
+      content="Contact ETHICA REVENUE GROUPS for a free medical billing assessment. Email, phone, and WhatsApp support available for healthcare providers."
     />
     <meta name="twitter:image" content="https://ethicarevenuegroups.com/logo.png" />
     <link rel="stylesheet" href="styles.css" />
@@ -39,7 +39,7 @@
           "@type": "Organization",
           "name": "ETHICA REVENUE GROUPS",
           "url": "https://ethicarevenuegroups.com/",
-          "email": "ethicarevenue@gmail.com",
+          "email": "usama203rb@gmail.com",
           "telephone": "+92-344-1790752",
           "address": {
             "@type": "PostalAddress",
@@ -83,18 +83,23 @@
         <div class="container contact-box">
           <article class="card">
             <h2>Contact Information</h2>
-            <p><strong>Email:</strong> ethicarevenue@gmail.com</p>
+            <p><strong>Email:</strong> usama203rb@gmail.com</p>
             <p><strong>Phone:</strong> +92 344 1790752</p>
             <p><strong>WhatsApp:</strong> +92 344 1790752</p>
             <p><strong>Address:</strong> Lahore, Punjab, Pakistan</p>
+            <p><strong>Business Hours:</strong> Monday to Friday, 9:00 AM - 7:00 PM PKT</p>
           </article>
 
           <form
             class="card"
             id="contactForm"
-            action="https://formspree.io/f/myklleqw"
+            action="https://formspree.io/f/mgorlozz"
             method="POST"
           >
+            <input type="hidden" name="_subject" value="New ETHICA Website Inquiry" />
+            <input type="hidden" name="_next" id="formNext" value="" />
+            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
             <h2>Send Message</h2>
             <label>
               Full Name
@@ -106,23 +111,23 @@
             </label>
             <label>
               Email
-              <input type="email" name="email" placeholder="you@example.com" required />
+              <input type="email" name="_replyto" placeholder="you@example.com" required />
             </label>
             <label>
               Service Needed
-              <select name="service">
-                <option>Complete Medical Billing</option>
-                <option>Denial Management</option>
-                <option>AR Follow-up</option>
-                <option>Coding Support</option>
+              <select name="service" required>
+                <option value="Complete Medical Billing">Complete Medical Billing</option>
+                <option value="Denial Management">Denial Management</option>
+                <option value="AR Follow-up">AR Follow-up</option>
+                <option value="Coding Support">Coding Support</option>
               </select>
             </label>
             <label>
               Message
               <textarea rows="4" name="message" placeholder="Tell us about your needs" required></textarea>
             </label>
-            <button class="btn btn-primary" id="submitBtn" type="submit">Submit</button>
-            <p id="formStatus" aria-live="polite"></p>
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <p class="form-note">If email delivery is delayed, contact us directly at usama203rb@gmail.com.</p>
           </form>
         </div>
       </section>
@@ -135,5 +140,13 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      (function () {
+        var nextField = document.getElementById("formNext");
+        if (nextField) {
+          nextField.value = new URL("thank-you.html", window.location.href).href;
+        }
+      })();
+    </script>
   </body>
 </html>

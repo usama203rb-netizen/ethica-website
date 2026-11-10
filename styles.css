@@ -223,6 +223,35 @@ p {
   color: #0c4a6e;
 }
 
+.about-preview {
+  background: linear-gradient(180deg, #f0f9ff 0%, transparent 100%);
+}
+
+.kpi-section {
+  background: #f8fbff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.kpi-card .stat {
+  margin-bottom: 0.85rem;
+}
+
+.kpi-card p,
+.kpi-secondary p {
+  margin-bottom: 0;
+}
+
+.kpi-secondary {
+  margin-top: 1rem;
+}
+
+.metric-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
 section {
   padding: 3.2rem 0;
 }
@@ -271,6 +300,10 @@ section {
   color: #fff;
   border-radius: 18px;
   padding: 2rem;
+}
+
+.cta-spaced {
+  margin-top: 1.5rem;
 }
 
 .cta p {
@@ -327,6 +360,22 @@ label {
   font-size: 0.95rem;
   color: #334155;
   margin-bottom: 0.75rem;
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-note {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 #formStatus {
